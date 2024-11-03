@@ -109,6 +109,21 @@ if __name__ == "__main__": # execute logic if run directly
         _url_frame, text='Fetch info', command=fetch_url) # create button
     # fetch_url() is callback for button press
     _fetch_btn.grid(row=0, column=1, sticky=W, padx=5)
+    # grid mgr places object at position
+    _fetch_btn = ttk.Button(
+        _url_frame, text='Fetch Title', command=fetch_url)  # create button
+    # fetch_url() is callback for button press
+    _fetch_btn.grid(row=1, column=1, sticky=W, padx=5)
+    # grid mgr places object at position
+    _fetch_btn = ttk.Button(
+        _url_frame, text='Fetch Link', command=fetch_url)  # create button
+    # fetch_url() is callback for button press
+    _fetch_btn.grid(row=2, column=1, sticky=W, padx=5)
+
+    # img_frame contains Lisbox and Radio Frame
+    _img_frame = ttk.LabelFrame(
+        _mainframe, text='Content', padding='9 0 0 0')
+    _img_frame.grid(row=1, column=0, sticky=(N, S, E, W))
 
     # img_frame contains Lisbox and Radio Frame
     _img_frame = ttk.LabelFrame(
