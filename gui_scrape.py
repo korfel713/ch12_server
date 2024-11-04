@@ -38,7 +38,13 @@ def fetch_images(soup, base_url):
         name = img_url.split('/')[-1]
         images.append(dict(name=name, url=img_url))
     return images
-
+    
+def fetch_title(soup, base_url):
+    title =[]
+    for title in soup.findAll('title'):
+        title = title.text
+        title.append(title)
+    return title
 
 def save():
     if not config.get('images'):
