@@ -46,6 +46,13 @@ def fetch_title(soup, base_url):
         title.append(title)
     return title
 
+def fetch_urls(base_url):
+    urls = []
+    for url in _url.get():
+        urls.append(url)
+    return urls
+
+
 def save():
     if not config.get('images'):
         alert('No images to save')
